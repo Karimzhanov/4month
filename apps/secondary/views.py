@@ -7,6 +7,7 @@ from apps.secondary.models import Course
 def index(request):
     user = Home.objects.latest('id')
     curses = Secondary.objects.latest('id')
+    courses1 = Course.objects.all()
     return render(request, 'index2.html', locals())
 
 def about(request):

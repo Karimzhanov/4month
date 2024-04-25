@@ -1,4 +1,6 @@
 from django.db import models
+from ckeditor.fields import RichTextField
+
 
 class Home(models.Model):
     name = models.CharField(
@@ -103,7 +105,7 @@ class Hom(models.Model):
     )
 
     
-    discription = models.TextField(
+    discription = RichTextField(
         verbose_name="описания"
     )
 

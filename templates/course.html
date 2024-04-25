@@ -149,8 +149,6 @@
 			</div><!--- END CONTAINER -->
 		</section>	
 		<!-- END SECTION TOP -->
-		
-		
 		<section class="home_course section-padding">
 			<div class="container">			
 				<div class="row">
@@ -158,14 +156,14 @@
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_course">	
 							<div class="single_c_img">
-								<img src="{{course.image1.url}}" />
-								<span>{{course.course_title1}}</span>
+								<img src="{{course.image.url}}" />
+								<span>{{course.course_title}}</span>
 							</div>
 							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{course.course1}}</a></h4>
-							<p><span class="ti-book"> </span> 12 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2  Hrs 32 Min</p>
-							<div class="price">Цена курса - 	{{course.price1}} сом</div>
+							<h4><a href="course.html">{{course.course}}</a></h4>
+							<p><span class="ti-book"> </span>длительность курса-{{course.course_duration}} месяца</p>
+							<p><span class="ti-alarm-clock"> </span> время курса-{{course.course_tm}} </p>
+							<div class="price">Цена курса - {{course.price}} сом</div>
 						</div>
 					</div><!-- END COL -->
 					{% endfor %}

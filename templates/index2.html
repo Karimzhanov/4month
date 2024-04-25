@@ -282,89 +282,27 @@
 					</div><!--- END COL -->
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="cour_btn">
-							<a href="{% url 'course'%}" class="btn_one"> Посмотреть Все Курсы<i class="ti-arrow-top-right"></i></a>
+							<a href="{% url 'course'%}" class="btn_one"> Посмотреть Все курсы <i class="ti-arrow-top-right"></i></a>
 						</div>
 					</div><!--- END COL -->
 				</div><!--- END ROW -->				
 				<div class="row">
+					{% for course in courses %}
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_course">
 							<div class="single_c_img">
-								<img src="{{courses.image1.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title1}}</span>
+								<img src="{{course.image.url}}" class="img-fluid" alt="course-image" />
+								<span>{{course.course_title}}</span>
 							</div>
 							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course1}}</a></h4>
-							<p><span class="ti-book"> </span> 12 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price1}} сом</div>
+							<h4><a href="course.html">{{course.course}}</a></h4>
+							<p><span class="ti-book"> </span> длительность курса-{{course.course_duration}} месяца</p>
+							<p><span class="ti-alarm-clock"> </span> время курса-{{course.course_tm}} </p>
+							<div class="price">Цена курса - {{course.price}} сом</div>
 						</div>
 					</div><!-- END COL -->
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="single_course">
-							<div class="single_c_img">
-								<img src="{{courses.image2.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title2}}</span>
-							</div>
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course2}}</a></h4>
-							<p><span class="ti-book"> </span> 41 Course</p>
-							<p><span class="ti-alarm-clock"> </span>3 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price2}} сом</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="single_course">
-							<div class="single_c_img">
-								<img src="{{courses.image3.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title3}}</span>
-							</div>
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course3}}</a></h4>
-							<p><span class="ti-book"> </span> 32 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price3}} сом</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="single_course">
-							<div class="single_c_img">
-								<img src="{{courses.image4.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title4}}</span>
-							</div>
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course4}}</a></h4>
-							<p><span class="ti-book"> </span> 19 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price4}} сом</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="single_course">
-							<div class="single_c_img">
-								<img src="{{courses.image5.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title5}}</span>
-							</div>
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course5}}</a></h4>
-							<p><span class="ti-book"> </span> 22 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price5}} сом</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="single_course">
-							<div class="single_c_img">
-								<img src="{{courses.image6.url}}" class="img-fluid" alt="course-image" />
-								<span>{{courses.course_title6}}</span>
-							</div>
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<h4><a href="course.html">{{courses.course6}}</a></h4>
-							<p><span class="ti-book"> </span> 11 Course</p>
-							<p><span class="ti-alarm-clock"> </span>2 Hrs 32 Min</p>
-							<div class="price">Цена курса - {{courses.price6}} сом</div>
-						</div>
-					</div><!-- END COL -->						
+					{% endfor %}
+						
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->		
 		</section>
@@ -432,12 +370,10 @@
 					</div><!--- END COL -->						
 					<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 						<div class="ab_content">
-							<h2>{{users.discription}}</h2>
+							<h2>{{users.discription|safe}}</h2>
 							<p>{{users.discriptions}}</p>
 							<ul>
 								<li><span class="ti-check"></span>{{users.discriptions1}}</li>
-								<li><span class="ti-check"></span> {{users.discriptions2}}</li>
-								<li><span class="ti-check"></span> {{users.discriptions3}}</li>
 							</ul>
 							<a class="btn_one" href="{% url 'course'%}">Посмотреть все курсы <i class="ti-arrow-top-right"></i></a>
 						</div>
